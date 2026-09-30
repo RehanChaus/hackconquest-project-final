@@ -1,0 +1,6 @@
+{
+  "name": "FloodShield AI - Intelligent Disaster Management & Urban Flood Prediction",
+  "description": "AI-powered real-time urban flood intelligence and emergency command platform that transforms fragmented city data into predictive flood intelligence and actionable emergency decisions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-global: #E8EFF5;
+    --bg-main: #EDF3F7;
+    --surface-primary: #F6F9FB;
+    --surface-elevated: #FFFFFF;
+    --surface-secondary: #E2EBF2;
+    --surface-sidebar: #DCE7EF;
+    --primary-navy: #12324A;
+    --primary-blue: #1677C8;
+    --secondary-blue: #3B9CE2;
+    --cyan: #16A6C9;
+    --safe: #20A464;
+    --moderate: #E5A824;
+    --high: #ED7A2C;
+    --critical: #DC4545;
+    --text-primary: #163047;
+    --text-secondary: #607487;
+    --text-muted: #8A9CAA;
+    --border-subtle: rgba(36, 74, 101, 0.10);
+    --border-hover: rgba(36, 74, 101, 0.20);
+  }
+
+  body {
+    background-color: var(--bg-global);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: -0.011em;
+  }
+}
+
+/* Subtle, clean scrollbar for light theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(36, 74, 101, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(36, 74, 101, 0.28);
+}
+
+/* Subtle, steady pulse effect for critical flood risk map zones */
+@keyframes zoneCriticalPulse {
+  0%, 100% {
+    fill-opacity: 0.22;
+    stroke-opacity: 0.50;
+    stroke-width: 1.5px;
+    transform: scale(1);
+  }
+  50% {
+    fill-opacity: 0.42;
+    stroke-opacity: 0.95;
+    stroke-width: 2.2px;
+    transform: scale(1.015);
+  }
+}
+
+.zone-pulse-critical {
+  animation: zoneCriticalPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  transform-origin: center center;
+}
+
+
+
+
